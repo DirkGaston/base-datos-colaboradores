@@ -1,12 +1,20 @@
-import { BaseColaboradores } from "./BaseColaboradores";
+const List = ({ BaseColaboradores }) => {
+  if (BaseColaboradores.length === 0) {
+    return <h1 className="text-4xl">No hay colaboradores</h1>;
+  }
 
-const List = () => {
   return (
     <div className="prose-lg ml-6 ">
       <h1>Listado de Colaboradores</h1>
-      {BaseColaboradores.body.map((block) => Components(block))}
+      <ul>
+        {BaseColaboradores.map((collab) => (
+          <li key={collab.id} className="list-disc">
+            {collab.nombre} - {collab.correo}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
 
-// export default List;
+export default List;
