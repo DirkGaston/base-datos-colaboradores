@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [BaseColaboradores, setCollabs] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     setCollabs(collabs);
@@ -21,12 +22,13 @@ function App() {
       },
     ]);
   }
+
   return (
     <div className="App">
-      <NavBar />
+      <NavBar setSearchTerm={setSearchTerm} />
       <Form createCollab={createCollab} />
       <hr className="mt-10 mb-10 mr-6 ml-6 border-t-2 border-gray-200" />
-      <List BaseColaboradores={BaseColaboradores} />
+      <List BaseColaboradores={BaseColaboradores} searchTerm={searchTerm} />
     </div>
   );
 }
