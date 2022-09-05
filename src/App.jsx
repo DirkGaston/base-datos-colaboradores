@@ -16,9 +16,9 @@ function App() {
     setCollabs([
       ...BaseColaboradores,
       {
-        nombre: collabName.trim(),
+        name: collabName.trim(),
         id: BaseColaboradores.length + 1,
-        correo: collabMail.trim(),
+        email: collabMail.trim(),
       },
     ]);
     setSearchTerm("");

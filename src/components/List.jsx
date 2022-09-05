@@ -7,11 +7,13 @@ const List = ({ BaseColaboradores, searchTerm }) => {
     <div className="prose-lg ml-6 ">
       <h1>Listado de Colaboradores</h1>
       <ul>
-        {BaseColaboradores.filter((collab) =>
-          collab.nombre.toLowerCase().includes(searchTerm.toLowerCase())
+        {BaseColaboradores.filter(
+          (collab) =>
+            collab.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            collab.email.toLowerCase().includes(searchTerm.toLowerCase())
         ).map((collab) => (
           <li key={collab.id} className="list-disc">
-            {collab.nombre} - {collab.correo}
+            {collab.name} - {collab.email}
           </li>
         ))}
       </ul>
