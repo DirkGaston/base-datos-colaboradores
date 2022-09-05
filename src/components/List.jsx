@@ -8,7 +8,7 @@ const List = ({ BaseColaboradores, searchTerm }) => {
       <h1>Listado de Colaboradores</h1>
       <ul>
         {BaseColaboradores.filter((collab) =>
-          collab.nombre.toLowerCase().includes(searchTerm)
+          collab.nombre.toLowerCase().includes(searchTerm.toLowerCase())
         ).map((collab) => (
           <li key={collab.id} className="list-disc">
             {collab.nombre} - {collab.correo}

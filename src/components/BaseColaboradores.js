@@ -1,17 +1,17 @@
 export const BaseColaboradores = [
   {
     id: "1",
-    nombre: "Colaborador 1",
-    correo: "colaborador1@colaborador1.com",
+    nombre: "Dirk Gastón",
+    correo: "dirkgaston87@gmail.com",
   },
   {
     id: "2",
-    nombre: "Colaborador 2",
-    correo: "colaborador2@colaborador2.com",
+    nombre: "Russell Allen",
+    correo: "russellallen@symphonyx.com",
   },
   {
     id: "3",
-    nombre: "Colaborador 3",
-    correo: "colaborador3@colaborador3.com",
+    nombre: "Ihsahn",
+    correo: "ihsahn@ihsahn.com",
   },
 ];
